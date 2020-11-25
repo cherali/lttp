@@ -5,7 +5,7 @@ import IconWrapper from './IconWrapper'
 import './stepper-wrapper.scss'
 
 
-function StepperWrapper({ data, amount = 10, card: CardItem, cprops = {}, resetCondition, expand = 2 }) {
+function StepperWrapper({ data, amount = 10, card: CardItem, cprops = {}, resetCondition, expand = 2, wrapperClasses='' }) {
   const [activeIndex, setActiveIndex] = useState(0)
 
   // use to reset index on change resetCondition
@@ -26,7 +26,7 @@ function StepperWrapper({ data, amount = 10, card: CardItem, cprops = {}, resetC
 
   return (
     <div className='mt-3'>
-      {data.length > 0 && <div>
+      {data.length > 0 && <div className={wrapperClasses}>
         {
           renderedData.map((item, i) => (
             <CardItem key={i} item={item} {...cprops} index={i} countItem={renderedData.length} />

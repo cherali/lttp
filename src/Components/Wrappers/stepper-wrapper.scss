@@ -6,7 +6,7 @@
   padding: .3rem .7rem;
   color: black;
   :focus {
-    box-shadow: none;
+    box-shadow: none !important;
   }
 
   & span {
@@ -29,6 +29,10 @@
       filter: brightness(0);
     }
   }
+}
+
+.page-link:focus {
+  box-shadow: none !important;
 }
 
 .--right {
