@@ -1,1 +1,5 @@
+// category
 export { GET_CATEGORY_LIST_START, GET_CATEGORY_LIST_SUCCESS, GET_CATEGORY_LIST_FAILED } from './categoriesConstants'
+
+// products
+export { GET_PRODUCTS_START, GET_PRODUCTS_SUCCESS, GET_PRODUCTS_FAILED, CLEAR_PRODUCTS } from './productConstants'
