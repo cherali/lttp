@@ -1,0 +1,40 @@
+@import '../../common/styles/colors';
+
+.page-link {
+  border: none;
+  border-radius: 50% !important;
+  padding: .3rem .7rem;
+  color: black;
+  :focus {
+    box-shadow: none;
+  }
+
+  & span {
+    font-size: 1rem;
+  }
+
+  &-arr {
+    background-color: white;
+    display: flex;
+    cursor: pointer;
+
+    button {
+      cursor: pointer;
+      padding: 0;
+      box-shadow: none !important;
+    }
+
+    img {
+      padding: 0 .3rem;
+      filter: brightness(0);
+    }
+  }
+}
+
+.--right {
+  transform: scale(-1);
+}
+
+.page-item.active .page-link{
+  background-color: $primary-color;
+}
