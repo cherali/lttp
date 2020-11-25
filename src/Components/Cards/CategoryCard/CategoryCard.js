@@ -1,4 +1,5 @@
 import React from 'react'
+import { Card } from 'react-bootstrap';
 import IconWrapper from '../../Wrappers/IconWrapper'
 
 import './category-card.scss'
@@ -6,18 +7,20 @@ import './category-card.scss'
 function CategoryCard({ item }) {
   return (
     <div className='w-50 mb-5 --dir-ltr'>
-      <div className='d-flex align-items-center category-card'>
-        <div className='w-50 d-flex aligin-items-center ml-3'>
-          <div className='d-flex align-items-center mr-2'>
+      <Card className='w-75 category-card' >
+        <Card.Img variant='top' src={`https://back.liateam.com${item.image}`} className='category-card-img' />
+        <Card.Body>
+          <div className='mr-2'>
             <IconWrapper name='chevronLeft' className='category-card-chev' />
           </div>
+
           <div>
-            <p>{item.name}</p>
-            {item.description && <p>{item.description}</p>}
+            <Card.Text>{item.name}</Card.Text>
+            {item.description && <Card.Text>{item.description}</Card.Text>}
           </div>
-        </div>
-        <img src={`https://back.liateam.com${item.image}`} alt='cat-img' className='category-card-img' />
-      </div>
+
+        </Card.Body>
+      </Card>
     </div>
   )
 }
