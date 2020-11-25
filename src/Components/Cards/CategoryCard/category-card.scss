@@ -1,10 +1,17 @@
 .category-card {
-  width: 60%;
   margin: 0 auto;
   position: relative;
   height: 9rem;
   background-color: #f3f3f3;
   cursor: pointer;
+  :hover {
+    transition: 0.1s;
+    box-shadow: 1px 2px 9px -5px black;
+  }
+
+  & .card{
+    border: none;
+  }
 
   &-img {
     object-fit: fill;
