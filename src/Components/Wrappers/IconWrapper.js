@@ -2,6 +2,7 @@ const path = 'assets/images/'
 
 const ICONS = {
   chevronLeft: `${path}chevron-left.svg`,
+  cartPlus: `${path}cart-plus.svg`,
 }
 
 
