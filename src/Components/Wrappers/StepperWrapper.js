@@ -36,7 +36,7 @@ function StepperWrapper({ data, amount = 10, card: CardItem, cprops = {}, resetC
       }
 
       {availablePage > 0 && <div className='--dir-ltr mt-5 mr-auto ml-auto'>
-        <Pagination className='user-select-none'>
+        <Pagination className='user-select-none d-flex justify-content-center'>
           <li className='page-item page-link-arr'>
             <button disabled={activeIndex < 1} onClick={handleChangeIndex(activeIndex - 1)} className='page-link'>
               <IconWrapper name='chevronLeft' />
