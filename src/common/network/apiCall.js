@@ -1,9 +1,11 @@
 import { put } from 'redux-saga/effects'
 import axios from 'axios'
 
+const CancelToken = axios.CancelToken;
+let cancel;
 
 
-function* apiCall({ method, url, successType, failType, bodyParams, headerParams }) {
+function* apiCall({ method, url, successType, failType, bodyParams, headerParams, cancelable = false }) {
   const headers = {
     'accept': 'application/json',
     ['Content-Type']: 'application/json',
@@ -11,12 +13,20 @@ function* apiCall({ method, url, successType, failType, bodyParams, headerParams
   }
 
 
+  // if cancel flag is set and cancel exist cancel request
+  cancelable && cancel && cancel()
+
   try {
     const res = yield axios({
       method: method,
       headers,
       data: bodyParams,
       url,
+      // set cancel token
+      cancelToken: new CancelToken(function (c) {
+        if (cancelable) cancel = c;
+        else cancel = undefined
+      }),
     })
 
     yield put({ type: successType, payload: res.data })
