@@ -1,5 +1,6 @@
 import { lazy, Suspense } from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import ContentWrapper from './Components/Wrappers/ContentWrapper';
 
 
 const Home = lazy(() => import('./Containers/Home'))
@@ -11,11 +12,13 @@ function App() {
   return (
     <BrowserRouter>
       <Switch>
-      <Suspense fallback={null}>
-          <Route exact path='/' component={Home} />
-          <Route path='/category' component={Category} />
-          <Route path='/products' component={Products} />
-        </Suspense>
+        <ContentWrapper>
+          <Suspense fallback={null}>
+            <Route exact path='/' component={Home} />
+            <Route path='/category' component={Category} />
+            <Route path='/products' component={Products} />
+          </Suspense>
+        </ContentWrapper>
       </Switch>
     </BrowserRouter>
   );

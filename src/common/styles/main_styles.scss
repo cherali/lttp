@@ -13,3 +13,22 @@ body {
 .fs-2 {
   font-size: 2rem;
 }
+
+
+
+// override bootstrap styles
+nav.bg-light {
+  background-color: white !important;
+}
+
+.nav-link {
+  padding: 0 0.3rem !important;
+  :hover {
+    text-decoration: none;
+    border-bottom: 2px solid lightgray;
+  }
+  a {
+    color: black;
+    padding: 1rem 0.5rem 0.7rem;
+  }
+}

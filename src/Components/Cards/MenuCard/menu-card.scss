@@ -1,0 +1,5 @@
+@import '../../../common/styles/colors';
+
+li.active a{
+  border-bottom: 2px solid $primary-color !important;
+}
