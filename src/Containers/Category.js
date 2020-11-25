@@ -12,7 +12,7 @@ function Category() {
 
   return (
     <Container>
-      <p className='d-flex fs-2 mb-5'>دسته بندی</p>
+      <p className='text-right fs-2 mb-5'>دسته بندی</p>
 
       <Row noGutters className='w-100'>
         {

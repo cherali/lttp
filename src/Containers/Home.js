@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 function Home() {
   return (
-    <div>
+    <div className='text-right'>
       <Link to='/category'>مشاهده دسته بندی</Link>
     </div>
   )
