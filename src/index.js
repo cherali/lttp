@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { configureStore } from './redux/configStore';
 
 import 'bootstrap/dist/css/bootstrap.min.css'
-
+import './common/styles/main_styles.scss'
 
 const store = configureStore()
 
