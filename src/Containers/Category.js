@@ -2,6 +2,7 @@ import React from 'react'
 import { Container, Row } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
 import CategoryCard from '../Components/Cards/CategoryCard/CategoryCard';
+import Spinner from '../Components/Spinner/Spinner';
 
 
 function Category() {
@@ -17,6 +18,8 @@ function Category() {
             <CategoryCard item={cats} key={cats.id} />
           ))
         }
+
+        {!categories && <Spinner className='m-auto' />}
       </Row>
     </Container>
   )
