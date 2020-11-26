@@ -2,9 +2,6 @@ import React from 'react'
 import { Container, Row } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
 import CategoryCard from '../Components/Cards/CategoryCard/CategoryCard';
-import { getCategoryList } from '../redux/actionCreators/categoriesActionCreators';
-
-getCategoryList()
 
 
 function Category() {

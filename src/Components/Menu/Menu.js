@@ -1,8 +1,13 @@
 import { Nav, Navbar, Row } from 'react-bootstrap'
 import { useSelector } from 'react-redux'
 import MenuCard from '../Cards/MenuCard/MenuCard'
+import { getCategoryList } from '../../redux/actionCreators/categoriesActionCreators';
 
 import './menu.scss'
+
+
+getCategoryList()
+
 
 function Menu() {
   const categories = useSelector(s => s.category?.categoriesList)
