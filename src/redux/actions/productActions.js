@@ -33,5 +33,5 @@ export function* addProduct({ product }){
     })
   }
 
-  yield put({ type: SET_PRODUCT_TO_CARD, payload: cartList })
+  yield put({ type: SET_PRODUCT_TO_CARD, payload: [...cartList] })
 }
