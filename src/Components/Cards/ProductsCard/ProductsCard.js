@@ -1,7 +1,7 @@
-import React from 'react'
-import { Card, Col, Row } from 'react-bootstrap'
+import { Card, Col, Row, Button } from 'react-bootstrap'
 import { separator } from '../../../common/utils/helpers'
 import { getDim } from '../../../common/utils/screenDimention'
+import { addProductToCart } from '../../../redux/actionCreators/productActionCreators'
 import IconWrapper from '../../Wrappers/IconWrapper'
 
 import './products-card.scss'
@@ -39,7 +39,9 @@ function ProductsCard({ item }) {
           <Card.Footer>
             <Row noGutters>
               <Col sm='3'>
-                <IconWrapper name='cartPlus' />
+                <Button variant='light' className='p-0' onClick={() => addProductToCart(item)}>
+                  <IconWrapper name='cartPlus' />
+                </Button>
               </Col>
               <Col sm='9' className='-price d-flex justify-content-center align-items-center'>{separator(item.price.final_price)} تومان</Col>
             </Row>
