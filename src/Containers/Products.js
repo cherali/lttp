@@ -3,6 +3,7 @@ import { Container } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
 import { getDim } from '../common/utils/screenDimention';
 import ProductsCard from '../Components/Cards/ProductsCard/ProductsCard';
+import Spinners from '../Components/Spinner/Spinner';
 import StepperWrapper from '../Components/Wrappers/StepperWrapper';
 import { useQuery } from '../hooks/useQuery';
 import { getProductsList, clearProductsList } from '../redux/actionCreators/productActionCreators';
@@ -17,7 +18,7 @@ const AMOUNT_PER_PAGE = {
 }
 
 function Products() {
-  const products = useSelector(s => s.product?.products?.list) || []
+  const products = useSelector(s => s.product?.products?.list)
 
   const id = useQuery('id')
 
@@ -34,10 +35,12 @@ function Products() {
     <Container>
       <p className='text-right mt-4 mb-5 fs-2'>محصولات</p>
 
+      {!products && <Spinners className='text-center' /> }
+
       <StepperWrapper
         amount={AMOUNT_PER_PAGE[getDim()]}
         wrapperClasses='d-flex w-100 flex-wrap'
-        data={products}
+        data={products || []}
         card={ProductsCard}
         resetCondition={id}
       />
