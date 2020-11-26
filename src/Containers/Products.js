@@ -21,7 +21,6 @@ function Products() {
 
   const id = useQuery('id')
 
-  console.log(products)
 
   useEffect(() => {
     // clear list

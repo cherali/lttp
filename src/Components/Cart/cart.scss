@@ -1,0 +1,82 @@
+@import '../../common/styles/colors';
+
+.--badge {
+  background: $primary-color;
+  border-radius: 50%;
+  width: 23px;
+  height: 22px;
+  position: absolute;
+  left: 32px;
+  top: 1px;
+  padding-right: 1px;
+  padding-bottom: 1px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.7rem;
+  color: white;
+}
+
+.-cart {
+  left: 25px !important;
+  top: 68px !important;
+  background-color: $dark-bg-cart;
+  padding: 0 !important;
+  z-index: 5000;
+  
+  .-cart-list-wrapper {
+    max-height: 55vh;
+    overflow-y: auto;
+  }
+  
+  .--arrow {
+    width: 22px;
+    height: 22px;
+    background: black;
+    z-index: -1;
+    position: absolute;
+    transform: rotateZ(45deg);
+    left: 5px;
+    top: -11px;
+  }
+
+  .--border {
+    border-top: 1px solid #4b4b4e;
+  }
+
+  .--empty-wrapper {
+    background-color: black;
+  }
+  
+  // scroll
+  /* width */
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: $dark-bg-cart; 
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+}
+
+.--bg-light {
+  background-color: $light-bg-cart;
+}
+
+.--bg-dark {
+  background-color: $dark-bg-cart;
+}
+
+

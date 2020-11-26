@@ -8,3 +8,5 @@ export const separator = (txt, num = 3, sym = ',') => {
   }
   return reverse(arr.join(sym))
 }
+
+export const calcCartPrices = arr => arr.reduce(((ac, cu) => ac + (cu.count * cu.prod.price.final_price)), 0)

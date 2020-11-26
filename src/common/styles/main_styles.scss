@@ -1,3 +1,5 @@
+@import 'colors';
+
 body {
   direction: rtl;
 }
@@ -14,7 +16,9 @@ body {
   font-size: 2rem;
 }
 
-
+.text-gray {
+  color: $gray-color;
+}
 
 // override bootstrap styles
 nav.bg-light {
@@ -30,5 +34,31 @@ nav.bg-light {
   a {
     color: black;
     padding: 1rem 0.5rem 0.7rem;
+  }
+}
+
+// BOTTONS
+.btn {
+  font-weight: 700;
+  padding: 1rem .75rem;
+  border-radius: 0.4rem;
+}
+.btn-primary {
+  background-color: $primary-color;
+  border-color: $primary-color;
+
+  &:hover, &:focus, &:active {
+    background-color: $primary-color !important;
+    border-color: $primary-color !important;
+    box-shadow: 0 0 0 0.2rem rgba(236, 64, 122, 0.5) !important;
+  }
+}
+.btn-light {
+  background-color: transparent;
+  border: none;
+  &:hover, &:focus, &:active {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
   }
 }
