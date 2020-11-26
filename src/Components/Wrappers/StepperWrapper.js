@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Button, Pagination } from 'react-bootstrap'
+import { Pagination } from 'react-bootstrap'
 import IconWrapper from './IconWrapper'
 
 import './stepper-wrapper.scss'
