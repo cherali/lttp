@@ -16,7 +16,7 @@ function Category() {
 
       <Row noGutters className='w-100'>
         {
-          categories.map(cats => (
+          categories?.map(cats => (
             <CategoryCard item={cats} key={cats.id} />
           ))
         }

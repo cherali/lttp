@@ -11,7 +11,7 @@ function Menu() {
     <Row noGutters>
       <Navbar bg='light' variant="light" className='w-100'>
         <Nav>
-          {categories.map(cats => (
+          {categories?.map(cats => (
             <MenuCard item={cats} key={cats.id} />
           ))}
         </Nav>
