@@ -2,6 +2,7 @@ import { Nav, Navbar, Row } from 'react-bootstrap'
 import { useSelector } from 'react-redux'
 import MenuCard from '../Cards/MenuCard/MenuCard'
 import { getCategoryList } from '../../redux/actionCreators/categoriesActionCreators';
+import Spinner from '../Spinner/Spinner';
 
 import './menu.scss'
 
@@ -19,6 +20,8 @@ function Menu() {
           {categories?.map(cats => (
             <MenuCard item={cats} key={cats.id} />
           ))}
+
+          {!categories && <Spinner />}
         </Nav>
       </Navbar>
     </Row>
